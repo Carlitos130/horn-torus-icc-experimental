@@ -1,0 +1,71 @@
+{
+  "scl90r_data": {
+    "Somatizacion": 0.8,
+    "Obsesion-Compulsion": 0.9,
+    "Sensibilidad Interpersonal": 0.7,
+    "Depresion": 0.85,
+    "Ansiedad": 0.95,
+    "Hostilidad": 0.6,
+    "Ansiedad Fobica": 0.75,
+    "Ideacion Paranoide": 0.8,
+    "Psicoticismo": 0.9,
+    "GSI": 0.85,
+    "PST": 0.7,
+    "PSDI": 0.9
+  },
+  "params": {
+    "a_scale": 0.1,
+    "u_scale": 6.283185307179586,
+    "v_scale": 3.141592653589793,
+    "deformation_factor": 0.3,
+    "a_critical": 0.7853981633974483,
+    "a": 0.085,
+    "effective_a": 2.125
+  },
+  "lacanian_coordinates": {
+    "u_S": 1.2915436464758039,
+    "v_S": 5.969026041820607,
+    "u_I": 1.0471975511965976,
+    "v_I": 5.340707511102648,
+    "u_pulsion": 1.0471975511965976,
+    "v_pulsion": 5.340707511102648,
+    "pulsion_attachment_strength": 0.8485,
+    "u_Sigma": 1.0471975511965976,
+    "v_Sigma": 5.969026041820607
+  },
+  "fantasy_point": {
+    "u_v": [
+      3.141592653589793,
+      1.5707963267948966
+    ],
+    "xyz": [
+      -0.085,
+      1.0409497792752502e-17,
+      0.085
+    ]
+  },
+  "rupture": {
+    "count": 177,
+    "area_percent": 4.916666666666666
+  },
+  "topological_metrics": {
+    "surface_area_standard": 178.26972949467654,
+    "surface_area_deformed": 213.6473573128951,
+    "surface_area_delta_percent": 19.845000000000006,
+    "volume_standard": 189.41158758809382,
+    "volume_deformed": 208.16333475931512,
+    "volume_delta_percent": 9.900000000000004,
+    "willmore_energy_standard": 19.739208802178716,
+    "willmore_energy_deformed": 27.733588367061095,
+    "gaussian_curvature_min": -29.2575,
+    "gaussian_curvature_max": 0.3011764705882353,
+    "mean_curvature_avg": 0.7588235294117647,
+    "topological_entropy": 2.579342301683012,
+    "icc_index": 35.34125,
+    "clinical_severity_tier": "Severo",
+    "stability_score": 35.75,
+    "max_differential_tension": 0.8578302611531415,
+    "avg_differential_tension": 0.30304493199914934,
+    "high_tension_area_percent": 3.571428571428571
+  }
+}
