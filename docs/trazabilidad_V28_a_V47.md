@@ -89,6 +89,43 @@ rendimiento. Los archivos centrales habían divergido ~4.000 líneas.
   «NO publicado» ×0. Extractos: `v47_extract.txt` (fuente) y `v47_2_extract.txt`
   (nuevo); verificador `_verify_v47_2.py`.
 
+## Auditoría de la rama fusion-prcc y decisión sobre el worktree horn-fusion (3 de octubre de 2026)
+
+- **Qué es `horn-fusion/`**: un **worktree registrado del repo real**
+  (`horn-torus-icc-model-real/.git/worktrees/horn-fusion`), checkout de la rama
+  `fusion-prcc` — la línea de fusión (kill-critic, psicometría, baremos por
+  población, marcas de fantasía, Prcc) que entró a `main` por el PR #1
+  (`1bad4f9`) durante el ciclo V47. Su README público ya describe el modelo en
+  términos V44+ (Ding/censura, p como orificio doble, Prcc sin borde).
+- **Comparación con `main` del repo real**:
+  * `main..fusion-prcc` = **0 commits**: la rama no aporta nada que `main` no
+    tenga; es ancestro puro (la base que se fusionó).
+  * `fusion-prcc..main` = 7 commits: los 3 de la línea kill-critic previa al
+    ciclo (`0baf7cd`, `987d2ba`, `cd99dcd`) y los 3 de V47 (`e329036`,
+    `35a47fd`, `abf8452`) más el merge del PR.
+  * Diff de archivos (fusion-prcc → main): le faltan `package-lock.json`
+    (trackeado) y `src/utils/vortexSound.ts` (153 líneas), y difieren
+    `App.tsx`, `HornTorusCanvas.tsx`, `Scl90rForm.tsx`,
+    `SpectralSingularityPanel.tsx` (5 líneas: nota LECTURA + rótulo V44–V47),
+    `TheoreticalManualModal.tsx` (17: alineación V47), `types.ts` (53:
+    interfaces espectrales), `hornTorusMath.ts` (523: funciones espectrales +
+    ajuste LECTURA por vecindad A_cr), `.env.example`, `vite.config.ts`.
+- **Qué le faltaría para alinearse a V47**: nada de trabajo — sería un
+  fast-forward (`git -C horn-fusion merge --ff-only main`), porque no tiene
+  ningún commit propio. No hay ninguna modificación única en disco (solo un
+  `package-lock.json` sin trackear, ruido de una instalación local).
+- **Decisión**: **conservar el worktree, sin tocarlo**, como archivo de la
+  línea de fusión pre-V47 (acceso local de solo lectura). La rama ya está
+  pusheada a origin (`4855b3a`), así que GitHub conserva la historia; el
+  worktree no se commitea en el repo padre — se lo ignora vía `.gitignore`
+  (junto con `_backup_v47_antes_pull_2026-10-01/`, commit `8e11c82`), porque
+  commitear un worktree sería anidar un repositorio dentro de otro.
+- **Verificación en GitHub web (3 de octubre de 2026)**: `docs/` del repo
+  padre (`horn-torus-icc-experimental`) lista los 4 archivos de la adenda V47 2
+  (commit `eb964d1`, 9:04 GMT-3); el render de `V47_escritos_completos.md`
+  muestra la §8 íntegra («LECTURA del análisis espectral», «vecindad A_cr»),
+  sin mojibake. La carpeta queda enlazada desde el README del repo padre.
+
 ## Convenciones de archivo
 
 - Resumen: `Horn_Torus_del_Icc_resumen_v8..v15.md` (espejos en `Claude outputs\*-V28..V47.md`), docx por versión.
