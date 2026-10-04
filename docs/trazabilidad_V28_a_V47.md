@@ -126,6 +126,34 @@ rendimiento. Los archivos centrales habían divergido ~4.000 líneas.
   muestra la §8 íntegra («LECTURA del análisis espectral», «vecindad A_cr»),
   sin mojibake. La carpeta queda enlazada desde el README del repo padre.
 
+## Alineación del worktree horn-fusion a main — estado V47 (4 de octubre de 2026)
+
+- **Operación**: sobre el worktree `horn-fusion/` (rama `fusion-prcc`) se borró
+  el único pendiente de disco (`package-lock.json` sin trackear, ruido de una
+  instalación local) y se ejecutó `git -C horn-fusion merge --ff-only main`,
+  tal como anticipaba la auditoría del 3/10 (fast-forward garantizado: la rama
+  no tenía ningún commit propio, `main..fusion-prcc` = 0).
+- **Resultado**: fast-forward limpio `4855b3a → abf8452` («docs: alinea los
+  paneles integrados…»): 12 archivos, +5130/−2534. Entra así todo el contenido
+  V47 que le faltaba (`vortexSound.ts`, funciones espectrales + ajuste LECTURA
+  en `hornTorusMath.ts`, paneles y formularios, `package-lock.json` trackeado,
+  `vite.config.ts`, `.env.example`; se retira `bun.lock`).
+- **Verificación del estado V47**:
+  * `git rev-parse HEAD` = `abf8452…` = `main` del repo real; `git status
+    --short --branch` limpio: `## fusion-prcc...origin/fusion-prcc [ahead 7]`.
+  * `git diff fusion-prcc main` vacío: el árbol del worktree es idéntico a main.
+  * Marcadores V47 en el worktree: «Lectura (V47» en
+    `SpectralSingularityPanel.tsx`, «Config Axioma 2» en `App.tsx`,
+    `src/utils/vortexSound.ts` en disco y `package-lock.json` trackeado
+    (`git ls-files`), junto a `vite.config.ts` y `.env.example`.
+  * `npx tsc --noEmit` en el worktree: sin errores (TSC_OK).
+- **Estado de la rama**: `fusion-prcc` local queda **adelantada 7** respecto de
+  `origin/fusion-prcc` (que sigue en `4855b3a`). **No se pusheó**: el pedido fue
+  solo alinear el worktree; publicar la rama a origin queda sujeto a decisión
+  explícita (si se hace, fusion-prcc pasará a ser idéntica a main en GitHub; el
+  estado pre-V47 que describe la auditoría del 3/10 queda preservado en origin
+  mientras no se pushee).
+
 ## Convenciones de archivo
 
 - Resumen: `Horn_Torus_del_Icc_resumen_v8..v15.md` (espejos en `Claude outputs\*-V28..V47.md`), docx por versión.
