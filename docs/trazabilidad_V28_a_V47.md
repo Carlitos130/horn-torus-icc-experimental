@@ -147,12 +147,13 @@ rendimiento. Los archivos centrales habían divergido ~4.000 líneas.
     `src/utils/vortexSound.ts` en disco y `package-lock.json` trackeado
     (`git ls-files`), junto a `vite.config.ts` y `.env.example`.
   * `npx tsc --noEmit` en el worktree: sin errores (TSC_OK).
-- **Estado de la rama**: `fusion-prcc` local queda **adelantada 7** respecto de
-  `origin/fusion-prcc` (que sigue en `4855b3a`). **No se pusheó**: el pedido fue
-  solo alinear el worktree; publicar la rama a origin queda sujeto a decisión
-  explícita (si se hace, fusion-prcc pasará a ser idéntica a main en GitHub; el
-  estado pre-V47 que describe la auditoría del 3/10 queda preservado en origin
-  mientras no se pushee).
+- **Estado de la rama**: `fusion-prcc` local quedó **adelantada 7** respecto de
+  `origin/fusion-prcc` (que seguía en `4855b3a`). **Pusheada a origin el mismo
+  4 de octubre, por pedido explícito**: fast-forward `4855b3a..abf8452` en
+  `origin/fusion-prcc`, verificado (`fusion-prcc...origin/fusion-prcc` sin
+  adelantos; ambos refs = `abf8452`). GitHub refleja ahora en la rama el
+  estado V47, idéntico a `main`; el estado pre-V47 de la auditoría del 3/10
+  queda accesible localmente vía `4855b3a` y en la historia de la rama.
 
 ## Convenciones de archivo
 
