@@ -90,9 +90,10 @@ Palabras clave: topología del inconsciente, horn torus, nudo borromeo, sinthome
 
 Registros de lo que Buffy ajustó antes de integrar (textos corregidos; sin cambio doctrinal):
 
-- **χ corregido según §4.7:** la formulación original «hace caer χ de 0 a 1» era numéricamente inconsistente con el punto 1 del §4.7 (horn torus: χ(X) = 1, H₁(X) = ℤ; separadas las hojas → esfera: χ = 2, H₁ = 0). Corona aprobada por el usuario en el turno previo como corrección pendiente; quedó «horn torus → esfera, χ = 1 → χ = 2».
+- **χ ajustado según §4.7:** la formulación original del usuario «hace caer χ de 0 a 1» era numéricamente inconsistente con el punto 1 del §4.7 (horn torus: χ(X) = 1, H₁(X) = ℤ; separadas las hojas → esfera: χ = 2, H₁ = 0). En el ciclo V49 quedó «horn torus → esfera, χ = 1 → χ = 2». Nota de supersede (V50): el autor adoptó después el marco de superficie para la transición — «toro liso → horn torus, χ = 0 → 1» (colapso del lazo longitudinal) —, que es la versión vigente.
 
-- **Sinthome:** en el Cierre, la separación inexistente de lo que el usuario escribía como «[:» queda como **material en espera de la tarea (11)**, no como texto definido. La definición sigue sin definirse (correcto según V44/V47).
+- **Sinthome:** en el Cierre, la fórmula provisional del autor queda reescrita: la función del sinthome (sostener sin garantía) se formaliza como la modalidad exigida de Σ, y el cotejo de las citas queda como **material en espera de la tarea (11)**. La definición sigue sin definirse (correcto según V44/V47).
+
 
 - **Abstract sin «energía de Willmore» y sin «Sonifica»**: la tesis no computa ni cita la energía de Willmore; el abstract no promete sonido. La tesis calcula χ, H₁ y la curvatura gaussiana en puntos críticos.
 
