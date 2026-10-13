@@ -8,7 +8,7 @@ Repositorio experimental del proyecto **Horn Torus ICC Model**: computacionaliza
 
 | Repositorio | Contenido |
 |---|---|
-| `horn-torus-icc-model` (https://github.com/Carlitos130/https-github.com-Carlitos130-horn-torus-icc-model) | La aplicación (React + TypeScript + Three.js + Vite), rama `main` (línea de tesis V44–V47 y aviso de estatuto V49, sin commitear) y rama `fusion-prcc` (línea de fusión). |
+| `horn-torus-icc-model` (https://github.com/Carlitos130/https-github.com-Carlitos130-horn-torus-icc-model) | La aplicación (React + TypeScript + Three.js + Vite), rama `main` (línea de tesis V44–V47) y rama `fusion-prcc` (línea de fusión, con el aviso de estatuto V49 commiteado: `9a8d51d`, validado con `tsc` y build). |
 | `horn-torus-icc-experimental` (este repo) | Prototipos y **documentación de la tesis**: la tesis misma, los escritos completos y la trazabilidad de versiones. |
 
 ## Documentación de la tesis (`docs/`)
