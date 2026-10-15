@@ -1,0 +1,59 @@
+FAMILIA REAL X_delta (adenda_v51_formal.py)
+  perfil: DEFAULT_SCL90R_DATA; raw_min=-1.313542  raw_max=1.482226
+  delta* (f<=0) teorico = 0.761300   |   Wegbreite pi/6 = 0.523599
+CONTROL A - dominio (T^2, delta=0, sin identificar cuspide):
+  [ OK  ] chi A: got 0, want 0
+  [ OK  ] b1 A: got 2, want 2
+  [ OK  ] b2 A: got 1, want 1
+CONTROL B - imagen (cuspide p identificada, delta=0):
+  [ OK  ] chi B: got 1, want 1
+  [ OK  ] b1 B: got 1, want 1
+  [ OK  ] b2 B: got 1, want 1
+
+BARRIDO delta (imagen, SCL default):
+   delta    min_f   chi  b0  b1  b2   E      F
+  0.0000    1.0000   1   1   1   1 15336 10224
+  0.0374    0.9509   1   1   1   1 15336 10224
+  0.0748    0.9017   1   1   1   1 15336 10224
+  0.1122    0.8526   1   1   1   1 15336 10224
+  0.1496    0.8035   1   1   1   1 15336 10224
+  0.1870    0.7544   1   1   1   1 15336 10224
+  0.2244    0.7052   1   1   1   1 15336 10224
+  0.2618    0.6561   1   1   1   1 15336 10224
+  0.2992    0.6070   1   1   1   1 15336 10224
+  0.3366    0.5579   1   1   1   1 15336 10224
+  0.3740    0.5087   1   1   1   1 15336 10224
+  0.4114    0.4596   1   1   1   1 15336 10224
+  0.4488    0.4105   1   1   1   1 15336 10224
+  0.4862    0.3614   1   1   1   1 15336 10224
+  0.5236    0.3122   1   1   1   1 15336 10224
+  => en [0, pi/6] la imagen X_delta se mantiene homotopa a S^2 vee S^1
+     (chi=1, b1=1, b2=1 en todos los deltas): el umbral pi/6 es METRICO
+
+  delta* = 0.761300 > pi/6 : en el regimen Wegbreite f>0 siempre:
+  NO hay evento topologico en [0, pi/6] para este perfil.
+
+perfil RUPTURA (IGS 3.30, fuera de baremo): raw_min=-4.642719  delta*=0.215391  (pi/6=0.523599)
+  ATENCION: en el perfil extrema delta* <= pi/6: f<=0 ANTES del umbral
+  Wegbreite. Estatuto B antes/despu?s de delta*:
+    pre  (delta=0.2111): chi=1 b1=1 b2=1 min_f=0.0200
+    (despues de delta* la parametrizacion atraviesa el eje: la familia
+     pierde estado de superficie: reportado, no silenciado)
+
+SNAPPY 3.3.2 (exterior .homology() via O8; volumen geometrico):
+  [ OK  ] unknot 1 componente: 1
+  [ OK  ] unknot homology: Z
+  [ OK  ] unknot vol==0: True
+  trefoil (s1^3):        homology=Z  volume=0.0000
+  [ OK  ] trefoil ext homology == Z: Z
+  frontera tubo trefoil (nuestro complejo): chi=0 b1=2 b2=1
+  [ OK  ] trefoil tube chi==0: 0
+  [ OK  ] trefoil tube b1==2: 2
+  [ OK  ] trefoil tube b2==1: 1
+  sintesis dualidad X_delta (imagen):
+    H~^1(X_delta) = Z (b1=1 por matriz de frontera)
+    H~_1(S^3\X_delta) = Z (interior ~gamma=unknown: SnapPy Z) + H_1(exterior)=0
+
+grafico: fig_adenda_v51.png
+
+ADENDA FORMAL OK
